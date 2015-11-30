@@ -4,28 +4,26 @@ package alumnoobxectos;
 import javax.swing.JOptionPane;
 
 public class Alumno {
-    public static int referencia ;
+    public static int refe ;
     private float notTeorica,notPractica,boletins ;
     private DatosPersoais persoal;
+    private int referencia;
 
     public Alumno() {
-    referencia ++ ;
+    refe ++ ;
+    referencia = refe;
+    
     }
     public Alumno(float notTeorica, float notPractica, float boletins, DatosPersoais persoal) {
-        referencia ++;
+        refe ++;
+        referencia= refe;
         this.notTeorica = notTeorica;
         this.notPractica = notPractica;
         this.boletins = boletins;
         this.persoal = persoal;
     }
 
-    public static int getReferencia() {
-        return referencia;
-    }
-
-    public static void setReferencia(int referencia) {
-        Alumno.referencia = referencia;
-    }
+   
 
     public float getNotTeorica() {
         return notTeorica;
